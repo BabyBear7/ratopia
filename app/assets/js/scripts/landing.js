@@ -244,7 +244,7 @@ const refreshServerStatus = async (fade = false) => {
 
     try {
 
-        const servStat = await getServerStatus(47, serv.hostname)
+        const servStat = await getServerStatus(47, serv.hostname, serv.port)
         console.log(servStat)
         pLabel = Lang.queryJS('landing.serverStatus.players')
         pVal = servStat.players.online + '/' + servStat.players.max
